@@ -1,0 +1,19 @@
+# 数据库相关配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mybatis-plus?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123456
+
+# Mybatis-Plus 日志配置
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+# 配置枚举类包路径
+  type-enums-package: com.yibao.mybatisplus.entity
+# 配置逻辑删除
+  global-config:
+    db-config:
+      logic-not-delete-value: 0
+      logic-delete-value: 1
